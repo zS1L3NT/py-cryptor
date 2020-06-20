@@ -124,7 +124,15 @@ while not extra:
 message = str(input('Enter message to ' + extra + 'crypt: '))
 
 print(extra + 'crypted message:')
-print(encrypt(message) if mode in e else decrypt(message))
+
+resp = ''
+broken = message.split()
+if len(broken) == 1: print(encrypt(message) if mode in e else decrypt(message))
+else:
+	for i in range(0, len(broken)):
+		resp += (encrypt(broken[i]) if mode in e else decrypt(broken[i])) + " "
+	print(resp.strip())
+
 
 # After 2 months of coding JavaScript and gaining
 # more experience, I cut down my Python cryptor's
