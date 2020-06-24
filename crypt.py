@@ -127,7 +127,7 @@ print(extra + 'crypted message:')
 
 resp = ''
 broken = message.split()
-if len(broken) == 1: print(encrypt(message) if mode in e else decrypt(message))
+if len(broken) == 1: print('\t' + (encrypt(message) if mode in e else decrypt(message)))
 else:
 	for i in range(0, len(broken)):
 		resp += (encrypt(broken[i]) if mode in e else decrypt(broken[i])) + " "
