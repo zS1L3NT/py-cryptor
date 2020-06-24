@@ -131,6 +131,7 @@ if len(broken) == 1:
 	if printing != '':
 		print(extra + 'crypted message:')
 		print('\t' + printing)
+		print('')
 	else:
 		print('Invalid code entered!')
 else:
@@ -141,6 +142,7 @@ else:
 		resp += (encrypt(broken[i]) if mode in e else decrypt(broken[i])) + " "
 	print(extra + 'crypted message:')
 	print('\t' + resp.strip())
+	print('')
 
 
 # After 2 months of coding JavaScript and gaining
