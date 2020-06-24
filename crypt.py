@@ -134,10 +134,12 @@ if len(broken) == 1:
 		print('')
 	else:
 		print('Invalid code entered!')
+		print('')
 else:
 	for i in range(0, len(broken)):
 		if mode in d and decrypt(broken[i]) == '':
 			print('Invalid code entered!')
+			print('')
 			exit()
 		resp += (encrypt(broken[i]) if mode in e else decrypt(broken[i])) + " "
 	print(extra + 'crypted message:')
