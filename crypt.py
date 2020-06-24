@@ -131,7 +131,7 @@ if len(broken) == 1: print(encrypt(message) if mode in e else decrypt(message))
 else:
 	for i in range(0, len(broken)):
 		resp += (encrypt(broken[i]) if mode in e else decrypt(broken[i])) + " "
-	print(resp.strip())
+	print('\t' + resp.strip())
 
 
 # After 2 months of coding JavaScript and gaining
