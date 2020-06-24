@@ -71,7 +71,7 @@ def encrypt(string):
 def decrypt(string):
 	res = ''
 	for i in range(1, len(string), 2):
-		if string[i] != dop[int(i / 2)]: return 'Invalid code entered!'
+		if string[i] != dop[int(i / 2)]: return ''
 	for i in range(0, len(string), 2): res += string[i]
 	###
 	tmp = list(res)
@@ -97,7 +97,7 @@ def decrypt(string):
 	tmp = list(res)
 	res = ''
 	for i in range(0, len(tmp), 2):
-		if tmp[i] != kpp[int(i / 2)]: return 'Invalid code entered!'
+		if tmp[i] != kpp[int(i / 2)]: return ''
 	for i in range(1, len(tmp), 2): res += tmp[i]
 	###
 	tmp = list(res)
@@ -123,15 +123,24 @@ while not extra:
 
 message = str(input('Enter message to ' + extra + 'crypt: '))
 
-print(extra + 'crypted message:')
-
 resp = ''
 broken = message.split()
-if len(broken) == 1: print('\t' + (encrypt(message) if mode in e else decrypt(message)))
+printing = ''
+if len(broken) == 1:
+	printing = (encrypt(message) if mode in e else decrypt(message))
+	if printing != '':
+		print(extra + 'crypted message:')
+		print(printing)
+	else:
+		print('Invalid code entered!')
 else:
 	for i in range(0, len(broken)):
+		if mode in d and decrypt(broken[i]) == '':
+			print('Invalid code entered!')
+			exit()
 		resp += (encrypt(broken[i]) if mode in e else decrypt(broken[i])) + " "
-	print('\t' + resp.strip())
+	print(extra + 'crypted message:')
+	print(resp.strip())
 
 
 # After 2 months of coding JavaScript and gaining
