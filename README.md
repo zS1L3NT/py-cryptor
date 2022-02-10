@@ -1,8 +1,8 @@
-# Cryptor
+# Text Cryptor
 
-![License](https://img.shields.io/github/license/zS1L3NT/py-cryptor?style=for-the-badge) ![Languages](https://img.shields.io/github/languages/count/zS1L3NT/py-cryptor?style=for-the-badge) ![Top Language](https://img.shields.io/github/languages/top/zS1L3NT/py-cryptor?style=for-the-badge) ![Commit Activity](https://img.shields.io/github/commit-activity/y/zS1L3NT/py-cryptor?style=for-the-badge) ![Last commit](https://img.shields.io/github/last-commit/zS1L3NT/py-cryptor?style=for-the-badge)
+![License](https://img.shields.io/github/license/zS1L3NT/py-text-cryptor?style=for-the-badge) ![Languages](https://img.shields.io/github/languages/count/zS1L3NT/py-text-cryptor?style=for-the-badge) ![Top Language](https://img.shields.io/github/languages/top/zS1L3NT/py-text-cryptor?style=for-the-badge) ![Commit Activity](https://img.shields.io/github/commit-activity/y/zS1L3NT/py-text-cryptor?style=for-the-badge) ![Last commit](https://img.shields.io/github/last-commit/zS1L3NT/py-text-cryptor?style=for-the-badge)
 
-Cryptor is a simple custom Python text encryptor and decryptor using my own encryption algorithm.
+Text Cryptor is a simple custom Python text encryptor and decryptor using my own encryption algorithm.
 
 ## Motivation
 
@@ -17,7 +17,7 @@ I was interested in how text encryptors work and tried to make my own, which cle
 Run the command
 
 ```
-$ python crypt.py
+$ python main.py
 ```
 
 ## How it works
